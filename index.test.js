@@ -5,7 +5,9 @@ test("Does the anagrams", ()=>{
 
     const anagrams = getAnagrams(words);
 
-    const expectedResult = 'anacleto cletoana\nmoro romo\narbol barlo bolra'
+    const expectedResult = 'moro romo \nanacleto cletoana \narbol barlo bolra \n';
+
+    console.log(showAnagrams(anagrams));
 
     expect(showAnagrams(anagrams)).toBe(expectedResult);
 });
