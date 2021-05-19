@@ -1,4 +1,4 @@
-function getAnagrams (words){
+function getAnagrams (words = []){
     const anagrams = new Map();
 
     for (let i = 0; i < words.length; i++) {
@@ -14,20 +14,13 @@ function getAnagrams (words){
     return anagrams;
 }
 
-function showAnagrams(anagrams){
-    let result = "";
-    anagrams.forEach((word_list) => {
-        let str = "";
-        
-        word_list.forEach((word) =>{
-            str += word + " ";
-        });
-        
-        result+=str+"\n"
-        
+function toList(anagrams = new Map()){
+    let result = [];
+    anagrams.forEach((word_list) => {  
+        result.push(word_list);
     });
     return result;
 
 }
 
-module.exports = {getAnagrams, showAnagrams};
+module.exports = {getAnagrams, toList};
