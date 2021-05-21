@@ -3,9 +3,9 @@ function getAnagrams (words = []){
 
     for (let i = 0; i < words.length; i++) {
         const word_sorted = words[i].split('').sort().join("");
-        const ana = anagrams.get(word_sorted)
-        if (ana){
-            ana.push(words[i]);
+        const setOfAnagrams = anagrams.get(word_sorted)
+        if (setOfAnagrams){
+            setOfAnagrams.push(words[i]);
         } 
         else {
             anagrams.set(word_sorted, [words[i]]);
